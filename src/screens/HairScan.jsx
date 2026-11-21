@@ -69,7 +69,7 @@ export default function HairScan({ apiKey, setApiKey }) {
           </div>
         )}
       </div>
-      {!hasEnvKey && <KeySettings apiKey={apiKey} setApiKey={setApiKey} />}
+      {import.meta.env.DEV && !hasEnvKey && <KeySettings apiKey={apiKey} setApiKey={setApiKey} />}
       <p className="note">Procura que se vea solo el cabello, sin tu cara, y con buena luz. La foto se envía a la API de Gemini. Las recomendaciones son orientativas, no un diagnóstico, y no prometen resultados.</p>
     </section>
   );
